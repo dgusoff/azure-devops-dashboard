@@ -25,7 +25,7 @@ jobs:
         node-version: ${{ env.NODE_VERSION }}
     - name: npm install, build, and test
       run: |
-        cat .env.example | sed 's#{{client_id}}#${{secrets.REACT_APP_CLIENT_ID}}#g' | sed 's#{{tenant_id}}#${{secrets.REACT_APP_TENANT_ID}}#g' | sed 's#{{redirect_url}}#${{secrets.AZURE_REDIRECT_URL}}#g' > .env
+        cat .env.sample | sed 's#{{client_id}}#${{secrets.REACT_APP_CLIENT_ID}}#g' | sed 's#{{tenant_id}}#${{secrets.REACT_APP_TENANT_ID}}#g' | sed 's#{{redirect_url}}#${{secrets.AZURE_REDIRECT_URL}}#g' > .env
         npm install
         npm run build --if-present
         npm run test --if-present
