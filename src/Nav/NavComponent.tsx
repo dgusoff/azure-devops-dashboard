@@ -1,7 +1,7 @@
 import { AuthenticatedTemplate, UnauthenticatedTemplate, useMsal } from '@azure/msal-react';
-import { Button, Container, Nav, Navbar } from "react-bootstrap";
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-import { loginRequest, msalConfig } from '../Auth/authConfig';
+import { Container, Nav, Navbar } from "react-bootstrap";
+import { Link } from 'react-router-dom';
+import { loginRequest } from '../Auth/authConfig';
 function NavComponent() {
     const { instance } = useMsal();
   
