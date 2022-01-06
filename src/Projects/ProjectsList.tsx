@@ -1,6 +1,7 @@
 import { useMsal } from "@azure/msal-react";
 import { useEffect, useRef, useState } from "react";
 import { Container, Table } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import { getTokenAndCallApi } from "../Api/Fetch";
 
 
@@ -29,9 +30,10 @@ export function ProjectsList() {
                     </thead>
                     <tbody>
                         {projectData.map(p => {
+                            const to = `${p.id}`;
                             return (
                                 <tr>
-                                    <td>{p.name}</td>
+                                     <td> <Link to={to}>{p.name}</Link></td>
                                 </tr>
                             )
                         })}
