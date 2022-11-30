@@ -1,8 +1,11 @@
 export const callApiWithToken = async (accessToken: string, apiEndpoint: string) => {
     const headers = new Headers();
     const bearer = `Bearer ${accessToken}`;
+    console.log(accessToken);
 
     headers.append("Authorization", bearer);
+    headers.append('Content-Type', 'application/json;odata=verbose');
+    headers.append('Accept', 'application/json;odata=verbose');
 
     const options = {
         method: "GET",

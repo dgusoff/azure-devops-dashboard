@@ -15,7 +15,3 @@ export const msalConfig = {
    scopes: ["User.Read"]
   };
   
-  // Add the endpoints here for Microsoft Graph API services you'd like to use.
-  export const graphConfig = {
-      graphMeEndpoint: "Enter_the_Graph_Endpoint_Here/v1.0/me"
-  };

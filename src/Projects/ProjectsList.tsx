@@ -11,7 +11,7 @@ export function ProjectsList() {
 
     useEffect(() => {
         if (!hasFetchedData.current) {
-            getTokenAndCallApi(instance, accounts[0], 'projects?api-version=6.1-preview.4').then((response) => {
+            getTokenAndCallApi(instance, accounts[0], '_api/web/lists').then((response) => {
                 console.log(response);
                 setProjectData(response.value);
             });
